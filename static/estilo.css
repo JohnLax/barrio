@@ -1,0 +1,165 @@
+
+
+:root{
+    --colorTextos: #838383;
+}
+
+*,
+::before
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto';
+    background: #232526;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 650px;
+    display: flex;    
+    justify-content: center;
+    align-items: center; 
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 300;
+    color: #7a7a7a;
+}
+
+form{
+    width: 90%;
+    max-width:400px;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    border-radius: 20px;
+    overflow: auto;
+    background: #ffffff;
+    padding: 15px 0px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+}
+.form{
+    width: 100%;
+    margin: auto;
+}
+form .grupo{
+    position: relative;
+    margin: 45px;
+
+
+}
+
+input{
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 0px 10px 0px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 0.1px solid var(--colorTextos);
+}
+
+
+
+input:focus{
+    outline: none;
+    color: #5e5d5d;
+}
+label{
+     color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+
+}
+input:focus~label,
+input:valid~label{
+    top: -14px;
+    font-size: 12px;
+    color: #2196f3;
+}
+.barra{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.barra::before{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #414345, #232526);
+    transition: 0.3s ease width;
+    left: 0;
+}
+input:focus~.barra::before{
+    width: 100%;
+}
+input[type="submit"], .register form input[type="submit"] {
+    font-family: 'Roboto';
+    background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #ffffff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.text-footer {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #7a7a7a;
+    font-weight: 300;
+}
+.text-msg {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    color: #000000;
+    font-weight: 310;
+}
+.text-footer a {
+    color: #0059ffaf;
+    font-weight: 500;
+}
+.text-footer a:hover {
+    color: #0059ff;
+    font-weight: 500;
+}
+@media screen and (max-width:300px){
+    .form{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:376px){
+    .form{
+
+        border-radius: 20px;
+        overflow: auto;
+        background: #ffffff;
+        padding: 15px 0px;
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8);
+        border-radius: 10px;
+    }
+}
